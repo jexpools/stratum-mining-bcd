@@ -1,5 +1,6 @@
 from stratum.pubsub import Pubsub, Subscription
 from mining.interfaces import Interfaces
+from stratum import settings
 
 import stratum.logger
 log = stratum.logger.get_logger('subscription')
@@ -36,9 +37,10 @@ class MiningSubscription(Subscription):
             log.error("Template not ready yet")
             return result
 
-        # Force set higher difficulty
-        # TODO
-        #self.connection_ref().rpc('mining.set_difficulty', [2,], is_notification=True)
+        # Force set default difficulty
+        session = self.connection_ref().get_session()
+        self.connection_ref().rpc('mining.set_difficulty', [settings.DEFAULT_DIFFICULTY,], is_notification=True)
+        session['difficulty'] = settings.DEFAULT_DIFFICULTY
         #self.connection_ref().rpc('client.get_version', [])
 
         # Force client to remove previous jobs if any (eg. from previous connection)
