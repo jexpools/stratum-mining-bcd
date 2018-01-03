@@ -26,7 +26,7 @@ class SimpleCoinbaser(object):
         d.addErrback(self._failure)
 
     def _address_check(self, result):
-        if result['isvalid']:
+        if result['isvalid'] and result['ismine']:
             self.is_valid = True
             log.info("Coinbase address '%s' is valid" % self.address)
 
