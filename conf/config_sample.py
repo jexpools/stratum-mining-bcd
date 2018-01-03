@@ -72,3 +72,5 @@ CENTRAL_WALLET = 'set_valid_addresss_in_config!'
 PREVHASH_REFRESH_INTERVAL = 5 # in sec
 MERKLE_REFRESH_INTERVAL = 60 # How often check memorypool
 COINBASE_EXTRAS = '/stratum/'
+
+DEFAULT_DIFFICULTY = 0.01  # Set miner default difficulty
