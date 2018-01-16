@@ -1,9 +1,10 @@
 '''
 This is example configuration for Stratum server.
-Please rename it to settings.py and fill correct values.
+Please rename it to config.py and fill correct values.
 '''
 
 # ******************** GENERAL SETTINGS ***************
+CONFIG_VERSION = False
 
 # Enable some verbose debug (logging requests and responses).
 DEBUG = False
