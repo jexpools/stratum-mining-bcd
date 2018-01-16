@@ -4,6 +4,7 @@
 # Configuration file is standard python module.
 import os, sys
 sys.path = [os.path.join(os.getcwd(), 'conf'),] + sys.path
+sys.path.append('.')
 
 from twisted.internet import defer
 
