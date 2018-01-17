@@ -141,6 +141,9 @@ class TemplateRegistry(object):
     def diff_to_target(self, difficulty):
         '''Converts difficulty to target'''
         diff1 = 0x00000000ffff0000000000000000000000000000000000000000000000000000
+        
+        if settings.CUSTOM_DIFF1 != None:
+           diff1 = settings.CUSTOM_DIFF1
         return diff1 / difficulty
 
     def get_job(self, job_id):
