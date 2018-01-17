@@ -5,6 +5,8 @@ Please rename it to config.py and fill correct values.
 
 # ******************** GENERAL SETTINGS ***************
 CONFIG_VERSION = False
+ALGO_NAME = 'x13bcd_hash'
+CUSTOM_DIFF1 = None
 
 # Enable some verbose debug (logging requests and responses).
 DEBUG = False
