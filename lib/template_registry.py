@@ -1,6 +1,7 @@
 import weakref
 import binascii
 import util
+from stratum import settings
 #import x13bcd_hash
 algolib = __import__(settings.ALGO_NAME)
 
